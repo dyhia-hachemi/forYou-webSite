@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFD8B7;
+    font-family: "Poppins" sans-serif;
+}
+
+a {    
+    color: #A65437;
+}
+/*
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+*/
+  
+
+/* Style général pour le texte du logo 
+color: #D98C5F;
+   
+
+.logo {
+    font-family: 'Montserrat', sans-serif; /* Police élégante et moderne 
+    font-size: 4em; /* Taille du texte du logo 
+    font-weight: bold; /* Met en valeur le texte 
+    color: #333333; /* Couleur principale du texte 
+    text-align: center; /* Centre le texte si nécessaire 
+    margin: 0; /* Enlève les marges par défaut 
+  }
+  
+  /* Style pour le texte "You" 
+  .highlight {
+    color: #D4AF37; /* Couleur dorée pour mettre en avant 
+    font-weight: bold; /* Met en valeur le texte "You" 
+  }
+  
+  /* Style pour le point 
+  #sp {
+    color:#D4AF37; /* Couleur dorée pour le point 
+    font-size: 1.5em; /* Taille légèrement plus grande pour le point 
+    margin-left: 0.1em; /* Espacement léger pour le point 
+  }*/
+  
