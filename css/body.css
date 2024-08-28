@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #FFD8B7;
     font-family: "Poppins" sans-serif;
@@ -16,38 +20,8 @@ body {
 a {    
     color: #A65437;
 }
-/*
-.container {
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-*/
-  
 
-/* Style général pour le texte du logo 
-color: #D98C5F;
-   
-
-.logo {
-    font-family: 'Montserrat', sans-serif; /* Police élégante et moderne 
-    font-size: 4em; /* Taille du texte du logo 
-    font-weight: bold; /* Met en valeur le texte 
-    color: #333333; /* Couleur principale du texte 
-    text-align: center; /* Centre le texte si nécessaire 
-    margin: 0; /* Enlève les marges par défaut 
-  }
-  
-  /* Style pour le texte "You" 
-  .highlight {
-    color: #D4AF37; /* Couleur dorée pour mettre en avant 
-    font-weight: bold; /* Met en valeur le texte "You" 
-  }
-  
-  /* Style pour le point 
-  #sp {
-    color:#D4AF37; /* Couleur dorée pour le point 
-    font-size: 1.5em; /* Taille légèrement plus grande pour le point 
-    margin-left: 0.1em; /* Espacement léger pour le point 
-  }*/
+h1{
+    color: #A65437;
+}
   
