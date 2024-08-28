@@ -23,7 +23,7 @@
 .about-text h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #A65437;
+    text-align: center;
 }
 
 .about-text p {
@@ -38,4 +38,70 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     height: 85vh;
 }
+
+/********* Reviews section **************/
+
+#reviews {
+    min-height: 100vh;
+    padding: 130px 30px;
+    background-color: #FFCBA1; /* Harmonisé avec votre palette */
+}
+
+.reviews {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajout de plus de largeur pour s’adapter à différentes tailles d’écran */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.reviews-list .review {
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    background-color: #FFE1CD; /* Harmonisé avec votre palette */
+    color: #A65437; /* Couleur du texte harmonisée */
+    border: 1px solid #A65437; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère pour plus de profondeur */
+}
+
+.reviews-list div h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #A65437; /* Couleur des titres harmonisée */
+    text-align: center;
+}
+
+.reviews-list div:hover {
+    transform: translateY(-10px);
+    background-color: #D98C5F; /* Changement de couleur au survol pour correspondre à votre palette */
+}
+
+.stars {
+    text-align: center;
+    margin-bottom: 15px; /* Ajuster l'espacement sous les étoiles */
+}
+
+.stars i {
+    color: #FFD700; /* Couleur dorée pour les étoiles */
+    margin-right: 5px; /* Espacement entre les étoiles */
+    font-size: 20px; /* Ajuster la taille des étoiles */
+}
+
+.review-header .profile-pic {
+    border-radius: 50%;
+    width: 60px; /* Ajustez la taille selon vos besoins */
+    height: 60px;
+    object-fit: cover;
+    margin-left: 40%;
+}
+
 
