@@ -32,14 +32,15 @@ nav ul li a {
 
 nav ul li a:hover{
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 25px;
+    color: white;
 }
 
 nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #A65437;
+    background-color: white;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -131,4 +132,8 @@ p {
     color: #A65437; /* Change la couleur du texte au survol */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Augmente l'ombre au survol */
     transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+}
+
+nav .icon {
+    display: none;
 }

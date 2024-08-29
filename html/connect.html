@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForYou | connexion</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/connect.css">
+    <script src="https://kit.fontawesome.com/a6c1691723.js" crossorigin="anonymous"></script>
+    <script src="../jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <p class="logo">For<span class="highlight">You</span><span id="sp">.</span></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#contact">Contact </a></li>
+                    <li><a href="#profil">Profil</a></li>  <!--<i></i>-->
+                    <p class="icon">close<i class="fas fa-times" onclick="closemenu()"></i></p>
+                </ul>
+                <p class="icon"><i class="fas fa-bars" onclick="openmenu()"></i>open</p>
+            </nav>
+        </div>
+    </header>
+
+    <section id="connexion">
+        <div class="connexion-container">
+            <div class="login active" >
+                <h1>Connexion</h1>
+                <form>
+                    <label for="userEmail">
+                        <i class="fa-solid fa-envelope"></i> Email:
+                    </label>
+                    <input type="email" name="userEmail" placeholder="votre email" required>
+    
+                    <label for="pwd">
+                        Mot De Passe:
+                    </label>
+                    <input type="password" name="pwd" placeholder="mot de passe " required>
+                    
+                    <button type="submit" class="btn btn2">Connecter</button>
+                </form>
+                <div class="help">
+                    <p>Vous n'avez pas encore de compte? <span>s'inscrire</span></p>
+                </div>
+            </div>
+            <div class="register desactive">
+                <h1>Inscription</h1>
+                <form>
+                    <label for="userName">
+                        <i class="fa-solid fa-user"></i>Nom D'Utilisateur
+                    </label>
+                    <input type="text" name="userName" placeholder="votre nom" required>
+                    <label for="userEmail">
+                        <i class="fa-solid fa-envelope"></i> Email:
+                    </label>
+                    <input type="email" name="userEmail" placeholder="votre email" required>
+                    <label for="pwd">
+                        Mot De Passe:
+                    </label>
+                    <input type="password" name="pwd" placeholder="mot de passe " required>                
+                    <button type="submit" class="btn btn2">Inscrire</button>
+                </form>
+                <div class="help">
+                    <p>Vous avez déja un compte ? <span>se connecter</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/conect.js"></script>
+</body>
+</html>

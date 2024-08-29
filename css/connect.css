@@ -1,0 +1,117 @@
+body {
+    background-image: url(../images/back3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar {
+    padding-right: 230px;
+}
+nav ul li a:hover{
+    color: #A65437;
+}
+
+nav ul li a::after {
+    background-color: #A65437;
+}
+
+button a{
+    color: white;
+}
+
+/* Contact section */
+#connexion {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+}
+
+.connexion-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px; /* Largeur maximale pour la section */
+}
+
+.login, .register {
+    flex: 2;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.login ,.register{
+    background-color: #FFE1CD; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère pour plus de profondeur */
+}
+
+.login form , .register form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login label ,.register label{
+    font-size: 18px;
+    font-weight: 600;
+    color: #A65437; 
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.login label i , .register label i {
+    margin-right: 10px;
+    color: #A65437; /* Couleur des icônes */
+}
+
+.login input , .register input{
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #A65437;
+    border-radius: 5px;
+}
+
+.login input::placeholder ,.register input::placeholder {
+    color: #9D7150; /* Couleur des placeholders  */
+}
+
+.login button ,.register button{
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #A65437; /* Couleur du bouton */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login button:hover,.register button:hover {
+    background-color: #D98C5F; /* Changement de couleur au survol */
+    transform: translateY(-2px);
+}
+
+.login .register{
+    border: 1px solid #D98C5F; /* Bordure subtile pour délimiter la section */
+}
+
+.login input:hover ,.register input:hover {
+    border-color: #D98C5F; /* Changement de couleur de la bordure au survol */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre subtile pour mettre en évidence le champ */
+}
+
+.help {
+    margin-top: 10px;
+}
+
+.help span:hover{
+    font-weight: bolder;
+    cursor: pointer;
+}
+.register{
+    display: none;
+}
