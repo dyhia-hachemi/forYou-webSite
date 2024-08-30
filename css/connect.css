@@ -2,6 +2,7 @@ body {
     background-image: url(../images/back3.png);
     background-repeat: no-repeat;
     background-size: cover;
+    /*background-attachment: fixed;*/
 }
 .navbar {
     padding-right: 230px;
@@ -33,14 +34,13 @@ button a{
     max-width: 1200px; /* Largeur maximale pour la section */
 }
 
-.login, .register {
-    flex: 2;
-}
 h1 {
     text-align: center;
     margin-bottom: 10px;
 }
 .login ,.register{
+    flex: 2;
+    transition: all 0.3s ease-in-out;
     background-color: #FFE1CD; 
     padding: 30px;
     border-radius: 10px;
@@ -74,6 +74,9 @@ h1 {
     border-radius: 5px;
 }
 
+#pwdd input {
+    width: 85%;
+}
 .login input::placeholder ,.register input::placeholder {
     color: #9D7150; /* Couleur des placeholders  */
 }
@@ -114,4 +117,10 @@ h1 {
 }
 .register{
     display: none;
+}
+
+form i {
+    color: #A65437;
+    cursor: pointer;
+    margin-left: 10px;
 }

@@ -6,7 +6,7 @@ header{
 .navbar {
     display: flex;
     align-items: center;
-    max-width: 1300px;
+    max-width: 1500px;
     padding-left: 25px;
     padding-right: 25px;
 }

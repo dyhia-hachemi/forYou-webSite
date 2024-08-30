@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/connect.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="https://kit.fontawesome.com/a6c1691723.js" crossorigin="anonymous"></script>
     <script src="../jquery-3.7.1.js"></script>
 </head>
@@ -18,9 +19,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#contact">Contact </a></li>
-                    <li><a href="#profil">Profil</a></li>  <!--<i></i>-->
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#contact">Contact </a></li>
+                    <li><a href="#connexion">Profil</a></li>  <!--<i></i>-->
                     <p class="icon">close<i class="fas fa-times" onclick="closemenu()"></i></p>
                 </ul>
                 <p class="icon"><i class="fas fa-bars" onclick="openmenu()"></i>open</p>
@@ -39,11 +40,14 @@
                     <input type="email" name="userEmail" placeholder="votre email" required>
     
                     <label for="pwd">
-                        Mot De Passe:
+                        <i class="fa-solid fa-lock"></i> Mot De Passe:
                     </label>
-                    <input type="password" name="pwd" placeholder="mot de passe " required>
+                    <div id="pwdd">
+                        <input type="password" name="pwd" placeholder="mot de passe " required id="pass-login">
+                        <i class="fa-solid fa-eye-slash" id="eye" onclick="togglePassword('pass-login', this)"></i>
+                    </div>
                     
-                    <button type="submit" class="btn btn2">Connecter</button>
+                    <button type="submit" class="btn btn2"><a href="profil.html">Connecter</a></button>
                 </form>
                 <div class="help">
                     <p>Vous n'avez pas encore de compte? <span>s'inscrire</span></p>
@@ -61,9 +65,13 @@
                     </label>
                     <input type="email" name="userEmail" placeholder="votre email" required>
                     <label for="pwd">
-                        Mot De Passe:
+                        <i class="fa-solid fa-lock"></i> Mot De Passe:
                     </label>
-                    <input type="password" name="pwd" placeholder="mot de passe " required>                
+                    <div id="pwdd">
+                        <input type="password" name="pwd" placeholder="mot de passe" required id="pass-register">
+                        <i class="fa-solid fa-eye-slash" id="eye" onclick="togglePassword('pass-register', this)"></i>
+                    </div>
+                    
                     <button type="submit" class="btn btn2">Inscrire</button>
                 </form>
                 <div class="help">
@@ -72,6 +80,7 @@
             </div>
         </div>
     </section>
+    
     <script src="../js/conect.js"></script>
 </body>
 </html>
