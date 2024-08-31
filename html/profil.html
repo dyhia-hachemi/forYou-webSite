@@ -6,7 +6,9 @@
     <title>ForYou | profil</title>
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/profil.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/logo.css">
+    <script src="../jquery-3.7.1.js"></script>
 </head>
 <body>
     <header id="head">
@@ -17,6 +19,7 @@
                 <nav>                    
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
+                        <li><a href="product.html">Produits</a></li>
                         <li><a href="index.html#contact">Contact </a></li>
                         <li><a href="#">Paramètres</a></li>
                         <li><a href="#">Déconnexion</a></li>
@@ -24,14 +27,33 @@
                 </nav>
             </div>
     </header>
-        <section id="profil">
+        <section id="profil" class="active">
             <img src="../images/profile-image.jpg" alt="Photo de Profil" class="profil-img" id="profil-img">
             <h2 id="user-name">Nom d'utilisateur</h2>
             <p>Email: <span id="user-email">exemple@mail.com</span></p>
-            <button class="btn edit-btn" onclick="editProfile()">Modifier Profil</button>
+            <button class="btn edit-btn" id="edit-btn">Modifier Profil</button>
         </section>
+        <section id="profil-edit" class="desactive">
+            <h3>Modifier les informations:</h3>
+            <label for="new-name">Nom:</label>
+            <input type="text" id="new-name" placeholder="Nouveau nom">
+    
+            <label for="new-email">Email:</label>
+            <input type="email" id="new-email" placeholder="Nouvel email">
+    
+            <label for="new-password">Mot de passe:</label>
+            <div id="pwdd">
+                <input type="password" name="pwd" placeholder="mot de passe " required id="new-password">
+                <i class="fa-solid fa-eye-slash" id="eye" onclick="togglePassword('pass-login', this)"></i>
+            </div>
+            <label for="new-avatar">Changer la photo de profil:</label>
+            <input type="file" id="new-avatar" accept="image/*">
+    
+            <button class="btn save-btn" onclick="ProfilChange()">Sauvegarder</button>
+        </section>    
 
-    <!--footer>
+        <br><br><br><br><br><br>
+    <footer>
         <div class="footer-container">
             <div class="footer-links">
                 <h2>Liens Utiles</h2>
@@ -54,203 +76,9 @@
         <div class="footer-bottom">
             <p>&copy; 2024 ForYou. Tous droits réservés</p>
         </div>
-    </footer
+    </footer>
     
-    
-    voici mon code de la page profil ////////////////////css./////////////////////////
-body {
-    background-color: #FFE1CD;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    max-width: 1500px;
-    padding-left: 25px;
-    background-color: #FFCBA1;
-    padding-right: 25px;
-}
-
-nav {
-    flex: 1;
-    text-align: right;
-}
-nav ul {
-    display: inline-block;
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-
-nav ul li a {
-    position: relative;
-    text-decoration: none;
-}
-
-nav ul li a:hover{
-    font-weight: bolder;
-    font-size: 25px;
-    color: white;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-#profil {
-    text-align: center;
-    margin: 40px 500px;
-    border: 4px solid #D98C5F;
-    padding: 50px;
-}
-
-.profil-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #D98C5F;
-    margin-bottom: 20px;
-}
-
-#user-name {
-    font-size: 28px;
-    color: #A65437;
-    margin-bottom: 10px;
-}
-
-#user-email , p{
-    font-size: 18px;
-    color: #9D7150;
-}
-
-.btn.edit-btn {
-    padding: 12px 20px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #A65437; /* Couleur du bouton */
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
-
-.btn.edit-btn:hover {
-    background-color: #D98C5F; /* Changement de couleur au survol */
-}
-/////////////////////////////@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #FFD8B7;
-    font-family: "Poppins" sans-serif;
-}
-
-a {    
-    color: #A65437;
-}
-
-h1{
-    color: #A65437;
-}
-  
-////////////////////////////////////
-/* Style général pour le texte du logo */
-.logo {
-    font-family: 'Montserrat', sans-serif; /* Utilise Montserrat pour un look moderne */
-    font-size: 40px; /* Ajuste la taille selon tes besoins */
-    font-weight: bold; /* Met en avant le texte */
-    color: #FFD8B7; /* Couleur principale du texte */
-    text-align: center; /* Centre le texte */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère pour plus de profondeur */
-    margin-left: 150px;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transition pour les effets de hover */
-}
-
-/* Style pour le mot "For" */
-.logo span:first-child {
-    color: #FFD8B7; /* Couleur du texte pour "For" */
-}
-
-
-/* Style pour le point */
-#sp {
-    color: #A65437; 
-    font-size: 1.5em; /* Ajuste la taille du point */
-    margin-left: 0.1em; /* Ajoute un petit espace à gauche du point */
-}
-
-/* Effet de hover sur le logo */
-.logo:hover {
-    color: #A65437; /* Change la couleur du texte au survol */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Augmente l'ombre au survol */
-    transform: scale(1.1); /* Agrandit légèrement le logo au survol */
-}
-
-nav .icon {
-    display: none;
-}////////////////////////////////////html///////////////<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ForYou | profil</title>
-    <link rel="stylesheet" href="../css/body.css">
-    <link rel="stylesheet" href="../css/profil.css">
-    <link rel="stylesheet" href="../css/logo.css">
-</head>
-<body>
-    <header id="head">
-            <div class="navbar">
-                <div class="logo">
-                    <p class="logo">For<span class="highlight">You</span><span id="sp">.</span></p>
-                </div>
-                <nav>                    
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="index.html#contact">Contact </a></li>
-                        <li><a href="#">Paramètres</a></li>
-                        <li><a href="#">Déconnexion</a></li>
-                    </ul>
-                </nav>
-            </div>
-    </header>
-        <section id="profil">
-            <img src="../images/profile-image.jpg" alt="Photo de Profil" class="profil-img" id="profil-img">
-            <h2 id="user-name">Nom d'utilisateur</h2>
-            <p>Email: <span id="user-email">exemple@mail.com</span></p>
-            <button class="btn edit-btn" onclick="editProfile()">Modifier Profil</button>
-        </section>
-
-</body>
-</html>
-    -->
+    <script src="../js/profil.js"> </script>
+    <script src="../js/conect.js"></script>
 </body>
 </html>
