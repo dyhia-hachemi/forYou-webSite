@@ -1,0 +1,121 @@
+* {
+    font-family: "Poppins" sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#carousel{
+    min-height: 100vh;
+    padding: 10px 30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 0;
+}
+
+.carousel {
+    width: 900px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    position: relative;
+    width: 2000px;
+    transition: transform 0.5s ease;
+}
+.card-list .card-item {
+    color: #fff;
+    width: 900px;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: rgba(255,255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+    margin: 10px;
+}
+.card-list .card-item .categorie-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    padding: 4px;
+}
+
+.card-list .card-item .categorie-name {
+    font-size: 1.15rem;
+    color: #A65437;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+
+.card-list .card-item .categorie-link {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color:white;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color:#A65437;
+    transition: 0.2 ease;
+    text-decoration: none;
+}
+
+.card-list .card-item .categorie-link:hover {
+    background-color: #D98C5F; /* Changer le fond lors du hover */
+    color: #FFFFFF;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} 
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.carousel-indicators button {
+    background-color: #bbb;
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-buttons button .active {
+    background-color: #333;
+}
+

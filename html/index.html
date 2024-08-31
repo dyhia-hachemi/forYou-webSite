@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ForYou | Ecommerce Website Design</title>
+    <script src="../jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/logo.css">
+    <link rel="stylesheet" href="../css/carousel.css">
     <link rel="stylesheet" href="../css/sections.css">
     <script src="https://kit.fontawesome.com/a6c1691723.js" crossorigin="anonymous"></script>
 </head>
@@ -25,7 +27,7 @@
                         <li><a href="#home">Accueil</a></li>
                         <li><a href="#about">Apropos </a></li>
                         <li><a href="#reviews">Avis</a></li>
-                        <li><a href="#products">Produits</a></li>
+                        <li><a href="#carousel">Produits</a></li>
                         <li><a href="#contact">Contact </a></li>
                         <li><a href="connect.html">Compte</a></li>
                         <p class="icon close">close<i class="fas fa-times" onclick="closemenu()"></i></p>
@@ -73,6 +75,74 @@
             </div>
         </div>
     </section>
+    <section id="carousel">
+        <!--h1>Nos Produits:</h1-->
+        <div class="slider-wraper carousel">
+            <div class="card-list carousel-track">
+                <div class="card-item">
+                    <img src="../images/carousel-img/pentalong1.jpg" alt="pant image" class="categorie-image">
+                    <h2 class="categorie-name">pant</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/haut1.jpg" alt="skirt image" class="categorie-image">
+                    <h2 class="categorie-name">chemises</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/robe1.jpg" alt="robe image" class="categorie-image">
+                    <h2 class="categorie-name">Robes</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/tenue2.jpg" alt="tenue image" class="categorie-image">
+                    <h2 class="categorie-name">Tenues</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/chaussure1.jpg" alt="chassures image" class="categorie-image">
+                    <h2 class="categorie-name"> Chaussures</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/bij1.jpg" alt="jewelleries image" class="categorie-image">
+                    <h2 class="categorie-name">Bijoux</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/montre1.jpg" alt="montres image" class="categorie-image">
+                    <h2 class="categorie-name">Montres</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/sac1.jpg" alt="bag image" class="categorie-image">
+                    <h2 class="categorie-name">Sac à main</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+                <div class="card-item">
+                    <img src="../images/carousel-img/Sac à Dos .jpg" alt="bag image" class="categorie-image">
+                    <h2 class="categorie-name">Sac au dos</h2>
+                    <a href="product.html" class="categorie-link">Plus</a>
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <div class="carousel-indicators">
+                <button data-slide="0" class="active"></button>
+                <button data-slide="1"></button>
+                <button data-slide="2"></button>
+                <button data-slide="3"></button>
+                <button data-slide="4"></button>
+                <button data-slide="5"></button>
+                <button data-slide="6"></button>
+                <button data-slide="7"></button>
+                <button data-slide="8"></button>
+            </div>
+        </div>
+    </section>
+
 <!-- Avis des clients-->
     <section id="reviews">
         <h1 class="reviews" class="subtitle">Avis de nos clients</h1>
@@ -197,6 +267,6 @@
         </div>
     </footer>
     <script src="../js/responsive.js"></script>
-    
+    <script src="../js/carousel.js"></script>
 </body>
 </html>
