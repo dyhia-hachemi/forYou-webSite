@@ -1,0 +1,36 @@
+
+/* Style général pour le texte du logo */
+.logo {
+    font-family: 'Montserrat', sans-serif; /* Utilise Montserrat pour un look moderne */
+    font-size: 40px; /* Ajuste la taille selon tes besoins */
+    font-weight: bold; /* Met en avant le texte */
+    color: #FFD8B7; /* Couleur principale du texte */
+    text-align: center; /* Centre le texte */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère pour plus de profondeur */
+    margin-left: 150px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition pour les effets de hover */
+}
+
+/* Style pour le mot "For" */
+.logo span:first-child {
+    color: #FFD8B7; /* Couleur du texte pour "For" */
+}
+
+
+/* Style pour le point */
+#sp {
+    color: #A65437; 
+    font-size: 1.5em; /* Ajuste la taille du point */
+    margin-left: 0.1em; /* Ajoute un petit espace à gauche du point */
+}
+
+/* Effet de hover sur le logo */
+.logo:hover {
+    color: #A65437; /* Change la couleur du texte au survol */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Augmente l'ombre au survol */
+    transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+}
+
+nav .icon {
+    display: none;
+}
