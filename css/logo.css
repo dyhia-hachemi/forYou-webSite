@@ -9,6 +9,7 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère pour plus de profondeur */
     margin-left: 150px;
     transition: color 0.3s ease, transform 0.3s ease; /* Transition pour les effets de hover */
+    cursor: pointer;
 }
 
 /* Style pour le mot "For" */
