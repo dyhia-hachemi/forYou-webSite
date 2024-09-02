@@ -1,0 +1,100 @@
+header {
+    background-image: none;
+}
+.navbar {
+    padding-right: 230px;
+    background-color: #FFCBA1;
+}
+nav ul li a:hover{
+    color: #A65437;
+}
+
+nav ul li a::after {
+    background-color: #A65437;
+}
+.container{
+    width: 80%;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFE1CD; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère pour plus de profondeur */
+    margin: 50px 150px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 18px;
+    font-weight: 600;
+    color: #A65437; 
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+input , textarea  {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #A65437;
+    border-radius: 5px;
+}
+input::placeholder , textarea::placeholder  {
+    color: #9D7150; /* Couleur des placeholders  */
+}
+
+button{
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #A65437; /* Couleur du bouton */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #D98C5F; /* Changement de couleur au survol */
+    transform: translateY(-2px);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #A65437; /* Couleur des titres harmonisée */
+}
+
+input:hover,textarea:hover {
+    border-color: #D98C5F; /* Changement de couleur de la bordure au survol */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre subtile pour mettre en évidence le champ */
+}
+
+td img {
+    border-radius: 10px;
+    width: 260px;
+    height: 200px;
+    margin: 20px;
+}
+
+.product-name {
+    text-align:  center;
+    color: #A65437;
+}
+
+.product-description {
+    color: #9D7150 ;
+    text-align: center;;
+}
+
+td .price {
+    text-align: center;
+    color: #A65437;
+    font-size: 16px;
+    font-weight: bolder;
+}
