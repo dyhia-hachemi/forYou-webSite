@@ -32,13 +32,13 @@
 
     <section id="connexion">
         <div class="connexion-container">
-            <div class="login active" >
+            <div class="login active">
                 <h1>Connexion</h1>
-                <form>
+                <form action="../php/login.php" method="post" class="login-form">
                     <label for="userEmail">
                         <i class="fa-solid fa-envelope"></i> Email:
                     </label>
-                    <input type="email" name="userEmail" placeholder="votre email" required>
+                    <input type="email" name="userEmail"  id="userEmail" placeholder="votre email" required>
     
                     <label for="pwd">
                         <i class="fa-solid fa-lock"></i> Mot De Passe:
@@ -48,7 +48,7 @@
                         <i class="fa-solid fa-eye-slash" id="eye" onclick="togglePassword('pass-login', this)"></i>
                     </div>
                     
-                    <button type="submit" class="btn btn2"><a href="profil.html">Connecter</a></button>
+                    <button type="submit" class="btn btn2"><a href="#">Connecter</a></button>
                 </form>
                 <div class="help">
                     <p>Vous n'avez pas encore de compte? <span>s'inscrire</span></p>
@@ -56,7 +56,7 @@
             </div>
             <div class="register desactive">
                 <h1>Inscription</h1>
-                <form>
+                <form action="../php/register.php" method="post" class="register-form">
                     <label for="userName">
                         <i class="fa-solid fa-user"></i>Nom D'Utilisateur
                     </label>
@@ -72,7 +72,13 @@
                         <input type="password" name="pwd" placeholder="mot de passe" required id="pass-register">
                         <i class="fa-solid fa-eye-slash" id="eye" onclick="togglePassword('pass-register', this)"></i>
                     </div>
-                    
+                    <!--label for="pwd">
+                        <i class="fa-solid fa-lock"></i>Confirmez Le Mot De Passe:
+                    </label>
+                    <div id="pwdd">
+                        <input type="password" name="pwd" placeholder="mot de passe" required id="conf-pass-register">
+                        <i class="fa-solid fa-eye-slash" id="eye" onclick="togglePassword('pass-register', this)"></i>
+                    </div-->
                     <button type="submit" class="btn btn2">Inscrire</button>
                 </form>
                 <div class="help">
