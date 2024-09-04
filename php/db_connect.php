@@ -8,5 +8,5 @@
     if ( $conn -> connect_error){
         die ("echec de la connexion :" .$conn -> connect_error);
     }
-    echo "connexion réussie <br>";
+    //echo "connexion réussie <br>";
 ?>    

@@ -22,7 +22,7 @@
             $_SESSION["email"] = $email;
             echo "success";
         } else {
-            echo "Mot de passe incorrect. ";
+            echo "Mot de passe incorrect.";
         }
     } else {
         echo "Aucun compte ne correspond à cet email.";
