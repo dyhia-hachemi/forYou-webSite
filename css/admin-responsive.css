@@ -1,169 +1,76 @@
-@media (max-width: 1200px) {
-    .navbar {
-        padding-right: 15px;
-    }
 
-    .container {
-        margin: 50px 30px;
-    }
-
-    .product-name, .product-description {
-        font-size: 14px;
-    }
-
-    #product-table td img {
-        width: 80px;
-    }
+/* Styles pour le menu latéral */
+#sidemenu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Caché par défaut */
+    width: 250px;
+    height: 100%;
+    background-color: #FFCBA1;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
 }
 
-/* Écrans plus petits que 992px */
-@media (max-width: 992px) {
-    .navbar {
-        padding-right: 0;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .container {
-        margin: 30px 15px;
-    }
-
-    #product-table td input[type='number'].quantity {
-        width: 80px;
-    }
-
-    .product-name, .product-description {
-        font-size: 12px;
-    }
-
-    /* Réorganisation en colonnes pour les écrans plus petits */
-    #product-table, #product-table thead, #product-table tbody {
-        display: block;
-    }
-
-    #product-table thead tr {
-        display: none;
-    }
-
-    #product-table tbody tr {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
-        border: 1px solid #A65437;
-        border-radius: 5px;
-        padding: 10px;
-        background-color: #FFE1CD;
-    }
-
-    #product-table tbody td {
-        display: block;
-        text-align: right;
-        padding: 5px 10px;
-        border-bottom: 1px solid #A65437;
-    }
-
-    #product-table tbody td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-right: 10px;
-    }
+/* Styles pour les icônes d'ouverture et de fermeture */
+.icon-container {
+    display: none; /* Caché par défaut */
 }
 
-/* Écrans plus petits que 768px */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        margin: 20px;
-        padding: 20px;
-    }
-
-    #product-table {
-        font-size: 14px;
-    }
-
-    #product-table th, #product-table td {
-        padding: 8px;
-    }
-
-    #product-table td input[type='number'].quantity {
-        width: 60px;
-    }
-
-    .product-name, .product-description {
-        font-size: 10px;
-    }
+.icon {
+    font-size: 24px;
+    cursor: pointer;
 }
 
-/* Styles pour les écrans plus petits que 756px */
+/* Styles pour les éléments de la sidebar */
+#sidemenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidemenu ul li {
+    margin-bottom: 20px;
+}
+
+#sidemenu ul li a {
+    text-decoration: none;
+    color: #A65437;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#sidemenu ul li a:hover {
+    background-color: #FFD7A9;
+}
+
+/* Styles pour la gestion responsive */
 @media (max-width: 756px) {
-    .container {
-        width: 100%;
-        margin: 10px;
-        padding: 15px;
+    .main-nav {
+        display: none; /* Cache le menu principal en mode responsive */
     }
 
-    .navbar {
-        padding: 10px;
+    #sidemenu {
+        right: -250px; /* Cache le menu latéral par défaut */
     }
 
-    #product-table {
-        font-size: 14px; /* Ajuste la taille de la police pour être lisible */
+    .icon-container {
+        display: block; /* Affiche les icônes en mode responsive */
     }
 
-    #product-table th, #product-table td {
-        padding: 10px;
+    .icon.open {
+        display: block; /* Affiche l'icône d'ouverture */
     }
 
-    #product-table td img {
-        width: 120px; /* Ajuste la taille des images pour qu'elles soient plus visibles */
-        height: auto;
+    .icon.close {
+        display: block; /* Affiche l'icône de fermeture */
     }
+}
 
-    #product-table td input[type='number'].quantity {
-        width: 60px; /* Ajuste la largeur des champs de quantité */
-    }
-
-    .product-name, .product-description {
-        font-size: 14px; /* Ajuste la taille de la police pour une meilleure lisibilité */
-    }
-
-    /* Réorganisation en colonnes pour les écrans plus petits */
-    #product-table, #product-table thead, #product-table tbody {
-        display: block;
-    }
-
-    #product-table thead tr {
-        display: none;
-    }
-
-    #product-table tbody tr {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        border: 1px solid #A65437;
-        border-radius: 5px;
-        padding: 10px;
-        background-color: #FFE1CD;
-    }
-
-    #product-table tbody td {
-        display: block;
-        text-align: right;
-        padding: 5px 10px;
-        border-bottom: 1px solid #A65437;
-    }
-
-    #product-table tbody td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-right: 10px;
-    }
-
-    /* Réduction des tailles des boutons */
-    #product-table td button {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
+/* Affichage du menu latéral lorsque ouvert */
+#sidemenu.open {
+    right: 0; /* Affiche le menu latéral */
 }

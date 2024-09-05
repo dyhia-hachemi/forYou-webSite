@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/logo.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/panier.css">
-    <title>ForYou | Admin </title>
+    <link rel="stylesheet" href="../css/admin-responsive.css">
+    <title>ForYou | Admin</title>
+    <script src="https://kit.fontawesome.com/a6c1691723.js" crossorigin="anonymous"></script>
     <script src="../jquery-3.7.1.js"></script>
 </head>
 
@@ -18,7 +21,19 @@
             <div class="logo">
                 <p class="logo">For<span class="highlight">You</span><span id="sp">.</span></p>
             </div>
-            <nav>                    
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#panier">Articles</a></li>
+                    <li><a href="../html/product.html">Produits</a></li>
+                </ul>
+                <div class="icon-container">
+                    <p class="icon open"><i class="fas fa-bars"></i></p>
+                </div>
+            </nav>
+            <nav id="sidemenu">
+                <div class="icon-container">
+                    <p class="icon close"><i class="fas fa-times"></i></p>
+                </div>
                 <ul>
                     <li><a href="#panier">Articles</a></li>
                     <li><a href="../html/product.html">Produits</a></li>
@@ -93,13 +108,12 @@
 
     $conn->close();
 ?>
-
-
             </tbody>
         </table>
     </section>
 
     <script src="../js/admin.js"></script>
+    <script src="../js/responsive.js"></script>
 </body>
 
 </html>
