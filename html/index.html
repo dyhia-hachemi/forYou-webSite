@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <!--link rel="stylesheet" href="../css/responsive.css"-->
     <link rel="stylesheet" href="../css/logo.css">
     <link rel="stylesheet" href="../css/carousel.css">
     <link rel="stylesheet" href="../css/sections.css">
@@ -27,7 +27,7 @@
                         <li><a href="#home">Accueil</a></li>
                         <li><a href="#about">Apropos </a></li>
                         <li><a href="#reviews">Avis</a></li>
-                        <li><a href="#carousel">Produits</a></li>
+                        <li><a href="#produit">Produits</a></li>
                         <li><a href="#contact">Contact </a></li>
                         <li><a href="connect.html">Compte</a></li>
                         <p class="icon close">close<i class="fas fa-times" onclick="closemenu()"></i></p>
@@ -75,70 +75,99 @@
             </div>
         </div>
     </section>
-    <section id="carousel">
-        <!--h1>Nos Produits:</h1-->
-        <div class="slider-wraper carousel">
-            <div class="card-list carousel-track">
-                <div class="card-item">
-                    <img src="../images/carousel-img/pentalong1.jpg" alt="pant image" class="categorie-image">
-                    <h2 class="categorie-name">pant</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/haut1.jpg" alt="skirt image" class="categorie-image">
-                    <h2 class="categorie-name">chemises</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/robe1.jpg" alt="robe image" class="categorie-image">
-                    <h2 class="categorie-name">Robes</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/tenue2.jpg" alt="tenue image" class="categorie-image">
-                    <h2 class="categorie-name">Tenues</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/chaussure1.jpg" alt="chassures image" class="categorie-image">
-                    <h2 class="categorie-name"> Chaussures</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/bij1.jpg" alt="jewelleries image" class="categorie-image">
-                    <h2 class="categorie-name">Bijoux</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/montre1.jpg" alt="montres image" class="categorie-image">
-                    <h2 class="categorie-name">Montres</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/sac1.jpg" alt="bag image" class="categorie-image">
-                    <h2 class="categorie-name">Sac à main</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
-                </div>
-                <div class="card-item">
-                    <img src="../images/carousel-img/Sac à Dos .jpg" alt="bag image" class="categorie-image">
-                    <h2 class="categorie-name">Sac au dos</h2>
-                    <a href="product.html" class="categorie-link">Plus</a>
+    <!-- Product section -->
+    <section class="slider-container" id="produit">
+        <div class="slider-images">
+            <div class="slider-img">
+                <img src="../images/carousel-img/bij1.jpg" alt="jewelleries image">
+                <h2>Bijoux</h2>
+                <div class="details">
+                    <h3>Bijoux</h3>
+                    <p>
+                        Lorem, ipsum dolor
+                        <a href="connect.html" class="btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>  
+                    </p>
                 </div>
             </div>
-            <div class="carousel-buttons">
-                <button id="prev"><</button>
-                <button id="next">></button>
+            <div class="slider-img">
+                <img src="../images/carousel-img/sac1.jpg" alt="bag image">
+                <h2>Sac</h2>
+                <div class="details">
+                    <h3>Sac</h3>
+                    <p>
+                        Lorem, ipsum dolor
+                        <a href="connect.html" class="btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>  
+                    </p>
+                </div>
             </div>
-            <div class="carousel-indicators">
-                <button data-slide="0" class="active"></button>
-                <button data-slide="1"></button>
-                <button data-slide="2"></button>
-                <button data-slide="3"></button>
-                <button data-slide="4"></button>
-                <button data-slide="5"></button>
-                <button data-slide="6"></button>
-                <button data-slide="7"></button>
-                <button data-slide="8"></button>
+            <div class="slider-img">
+                <img src="../images/carousel-img/pentalong1.jpg" alt="pant image">
+                <h2>pant</h2>
+                <div class="details">
+                    <h3>pant</h3>
+                    <p>
+                        Lorem, ipsum dolor
+                        <a href="connect.html" class="btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a> 
+                    </p>
+                </div>
+            </div>
+            <div class="slider-img active">
+                <img src="../images/carousel-img/robe1.jpg" alt="robe image">
+                <h2>Robes</h2>
+                <div class="details">
+                    <h3>Robes</h3>
+                    <p>
+                        Lorem, ipsum dolor
+                        <a href="connect.html" class="btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>  
+                    </p>
+                </div>
+            </div>
+            <div class="slider-img left">
+                <img src="../images/carousel-img/haut3.jpg" alt="skirt image">
+                <h2>chemises</h2>
+                <div class="details">
+                    <h3>chemises</h3>
+                    <p>
+                        Lorem, ipsum dolor
+                        <a href="connect.html" class="btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a> 
+                    </p>
+                </div> 
+            </div>
+            <div class="slider-img left">
+                <img src="../images/carousel-img/chaussure1.jpg" alt="chassures image">
+                <h2>Chaussures</h2>
+                <div class="details">
+                    <h3>Chaussures</h3>
+                    <p>
+                        Lorem, ipsum dolor
+                        <a href="connect.html" class="btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a> 
+                    </p>
+                </div>
+            </div>
+            <div class="slider-img left">
+                <img src="../images/carousel-img/montre1.jpg" alt="montres image">
+                <h2>Montres</h2>
+                <div class="details">
+                    <h3>Montres</h3>
+                    <p>
+                        Lorem, ipsum dolor
+                        <a href="connect.html" class="btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a> 
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -266,7 +295,6 @@
             <p>&copy; 2024 ForYou. Tous droits réservés</p>
         </div>
     </footer>
-    <script src="../js/responsive.js"></script>
     <script src="../js/carousel.js"></script>
 </body>
 </html>

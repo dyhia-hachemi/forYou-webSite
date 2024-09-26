@@ -1,31 +1,19 @@
-let index = 0 ; 
-let img = $(".carousel-track img");
-const imgWidth = img.prop("width");
-const totalImages = img.length;
+jQuery(document).ready(function($){
 
-function showSlide (index){
-    $ (" .carousel-track").animate({
-        left : - index * imgWidth + "px"
-    },
-    500 );
+    function autoSlide() {
+        let activeSlide = $('.slider-img.active');
+        let nextSlide = activeSlide.next('.slider-img').length ? activeSlide.next('.slider-img') : $('.slider-img').first();
+        
+        activeSlide.removeClass('active');
+        nextSlide.addClass('active');
 
-    $ (".carousel-indicators button").removeClass("active");
+       }
 
-    $ (".carousel-indicators button[data-slide=${index}]").addClass("active");
-}
+    $('.slider-img').on('click' , function(){
+        $('.slider-img').removeClass('active');
+        $(this).addClass('active');
+    });
 
-$ (" #next") .click (function () {
-    index = (index +1 ) % totalImages ;
-    showSlide (index);
-})
-
-
-$ (" #prev") .click (function () {
-    index = (index - 1 + totalImages ) % totalImages ;
-    showSlide (index);
-})
-
-$ (".carousel-indicators button").click(function (){
-    const newIndex = $(this).attr("data-slide");
-    showSlide(newIndex);
-})
+    // Faire défiler automatiquement toutes les 5 secondes
+    setInterval(autoSlide, 3000);
+});
